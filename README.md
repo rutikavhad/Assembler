@@ -1,23 +1,23 @@
 # Assembler
 Assembler for IA-32 instructions translates assembly language source code into machine code executable by Intel 32-bit processors.
 
-#Project Overview
+Project Overview
 
 This project is a small custom assembler core.
 It reads instructions (like in test.asm) and converts them into binary output (op.bin).
 Encoding parts are split into modules:
 
-#modrm.c – builds ModR/M byte
+modrm.c – builds ModR/M byte
 
-#sib.c – builds SIB byte
+sib.c – builds SIB byte
 
-#databss.c / databss.h – stores .data / .bss section info
+databss.c / databss.h – stores .data / .bss section info
 
-#main.c – main entry; parses file, resolves symbols, writes binary
+main.c – main entry; parses file, resolves symbols, writes binary
 
-#makefile – builds everything
+makefile – builds everything
 
-#op.bin – final output binary (generated automatically)
+op.bin – final output binary (generated automatically)
 
 This will:
    - supports db/dw/dd/dq/resb/resd/resq/rest
